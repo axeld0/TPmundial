@@ -252,3 +252,5 @@ nodoGrupoEquipo * crearNodoGrupoEquipo(Equipo * equipo)
 
     return nuevoNodoGrupo;
 }
+
+
