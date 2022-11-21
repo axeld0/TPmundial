@@ -208,6 +208,7 @@ void insertarGrupoDeEquipos (Equipo * punteroEquipo, nodoGrupoEquipo ** listaGru
     if(*listaGrupo == NULL)
     {
         *listaGrupo = nuevoNodoGrupo;
+
     }
     else
     {
@@ -217,6 +218,7 @@ void insertarGrupoDeEquipos (Equipo * punteroEquipo, nodoGrupoEquipo ** listaGru
             seg = seg->siguiente;
         }
         seg->siguiente = nuevoNodoGrupo;
+
     }
 }
 

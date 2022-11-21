@@ -8,7 +8,7 @@
 
 typedef struct
 {
-    int id; ///opcional
+    char id[5]; ///opcional
     char fecha [10]; /// (DD/MM)
     Equipo* equipo1;
     Equipo* equipo2;
@@ -55,7 +55,19 @@ typedef struct
 
 void cargarArchivoFaseDeGrupos ();
 nodoPartido * inicListaPartidos ();
-
+void verPartidos();
+void cargarArchivoPlayoffs();
+void verPartidosPlayoffs();
+void traerListaDePartidosDesdeArchivo (nodoPartido ** listaPartidos);
+void cargarListaPartidos (nodoPartido ** listaPartidos, partidoArchivo aux);
+nodoPartido * crearNodoPartido (partidoArchivo aux);
+void cargarArrayDePartidos (GrupoPartido PartidosGrupos[], nodoPartido * listaPartidos, Grupo arrayGrupos[]);
+void insertarGrupoPartidos(nodoPartido * listaPartidos , nodoPartido ** partidosDelGrupo, nodoGrupoEquipo * listaGrupos, int j);
+void mostrarGruposPartidos (GrupoPartido PartidosGrupos[]);
+void mostrarPartidosGrupo (nodoPartido  * partidos );
+nodoPartido * crearPartidoGrupo (nodoPartido * listaPartidos);
+void sortearEquipos (nodoPartido * nuevoPartido,nodoGrupoEquipo * listaGrupo );
+void  sortearEquipos2 (nodoPartido * nuevoPartido,nodoGrupoEquipo * listaGrupo, int contador );
 
 #endif // PARTIDOS_H_INCLUDED
 
